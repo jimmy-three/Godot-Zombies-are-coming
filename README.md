@@ -1,8 +1,8 @@
 <div align="center">
-  <h1>🧟 Zombies Are Coming</h1>
+  <h1>快打那些僵尸！</h1>
   <p><strong>一个用 Godot 4 开发的生存射击游戏</strong></p>
   <p>
-    <img src="https://img.shields.io/badge/Godot-4.2-%23478CBF?logo=godotengine&logoColor=white" alt="Godot 4">
+    <img src="https://img.shields.io/badge/Godot-4.7.1-%23478CBF?logo=godotengine&logoColor=white" alt="Godot 4.7.1">
     <img src="https://img.shields.io/badge/Language-GDScript-%23478CBF" alt="GDScript">
     <img src="https://img.shields.io/badge/Status-开发中-brightgreen" alt="Status">
   </p>
@@ -21,21 +21,6 @@
 
 ---
 
-## 🏪 商店系统
-
-商店分为 6 个页面：
-
-| 页面 | 内容 |
-|------|------|
-| ① 增益 | 伤害、射速、击退、精度提升 |
-| ② 武器 | AK47 / 加特林 / 霰弹枪 / 狙击枪（可升级） |
-| ③ 道具 | 绷带 / 月永云力 / 火焰子弹 / 精准射击 |
-| ④ 特殊 | 骸骨泯灭者（导弹）/ 炮台 |
-| ⑤ 弹药 | 各类型子弹与炮弹 |
-| ⑥ 自动 | 自动购买子弹 / 火焰子弹 |
-
----
-
 ## 🧟 核心机制
 
 - 动态难度：随时间自动提升，僵尸越来越强
@@ -47,7 +32,7 @@
 
 ## 🛠️ 技术栈
 
-- **引擎**：Godot 4.x
+- **引擎**：Godot 4.7.1
 - **语言**：GDScript
 - **版本控制**：Git + GitHub
 - **平台**：Windows / macOS / Linux / Web
@@ -60,6 +45,7 @@
 2. 克隆本仓库：
    ```bash
    git clone git@github.com:jimmy-three/Godot-Zombies-are-coming.git
+   ```
 
 ---
 
@@ -80,4 +66,6 @@ Godot-Zombies-are-coming/
 
 ---
 
-<div align="center"> <sub>由 <strong>jimmy-three</strong> 制作 · 一个准高一生的游戏开发之路</sub> </div> ```
+<div align="center">
+  <sub>Made by <strong>jimmy</strong> · 快打那些僵尸！</sub>
+</div>
