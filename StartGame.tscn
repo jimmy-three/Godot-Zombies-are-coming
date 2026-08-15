@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dua65j126pv2l"]
+
+[ext_resource type="Script" uid="uid://dpxk1ejsixeey" path="res://start_game.gd" id="1_0yd1k"]
+[ext_resource type="Texture2D" uid="uid://dt3am8t64vyav" path="res://resources/开始游戏界面.png" id="1_yyg2i"]
+
+[node name="StartGame" type="Node2D" unique_id=780023700]
+script = ExtResource("1_0yd1k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1065340028]
+position = Vector2(416, 324.00003)
+scale = Vector2(0.49712467, 0.4997014)
+texture = ExtResource("1_yyg2i")
+
+[node name="VSeparator" type="VSeparator" parent="." unique_id=2092796849]
+offset_left = 840.0
+offset_top = 1.0
+offset_right = 893.0
+offset_bottom = 648.0
+
+[node name="StartGame" type="Button" parent="." unique_id=256869598]
+offset_left = 915.0
+offset_top = 37.0
+offset_right = 1103.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 35
+text = "开始游戏"
+
+[node name="Language" type="Button" parent="." unique_id=1878716089]
+offset_left = 915.0
+offset_top = 160.0
+offset_right = 1103.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 35
+text = "语言切换
+Language"
+
+[node name="CenterContainer" type="CenterContainer" parent="Language" unique_id=1466495322]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 102.0
+offset_right = 237.0
+offset_bottom = 142.0
+
+[node name="CurrentLanguage" type="Label" parent="Language/CenterContainer" unique_id=766295788]
+layout_mode = 2
+text = "当前语言：中文"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Language" to="." method="_on_language_pressed"]

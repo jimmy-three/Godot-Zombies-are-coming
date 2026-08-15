@@ -1,0 +1,83 @@
+﻿keys,zh_CN,en_US,ja_JP
+LOCKED,(未解锁),(Locked),（ロック）
+PLUS,增\n益,  Gain  ,利\n得
+BULLETS,子\n弹,Bullets,弾\n丸
+GUNS,枪\n械,  Guns  ,銃\n器
+PROPS,道\n具, Props ,道\n具
+SENSITIVITY,旋转灵敏度,Sensitivity,かんど
+LASERSIGHT,开启激光瞄准,Laser Sight,レーザ照準
+LANGUAGE,语言切换,Language,言語
+DIFFICULTY,难度：,Difficulty:,難易度：
+LIFE,血量：,HP:,血の量：
+COIN,金币：,Coin:,コイン：
+LEFTBULLETS,剩余{name}：{num},Left {name} : {num},残り{name}弾：{num}
+SHELL12,12号霰弹,12-gauge shell,12号散弾
+SHELL9MM,9mm子弹,9mm bullets,9ミリ弾
+SHELL762MM,7.62mm子弹,7.62mm bullets,7.62ミリ弾
+MAXLIFE,最大生命值,Max life,最大HP
+SPEED,速度,Speed,速度
+SHOOTINTERVAL,攻击间隔倍率,Interval Multiplier,攻撃間隔倍率
+DAMAGEUP,伤害提升,Damage Increase,ダメージアップ
+DEAD,你死了,You died,あなたは死んだ
+TODIFFICULTY,到达难度%d,Reaching difficulty %d,到達難度%d
+RETRY,重新开始,Retry,再開する
+DAMAGEUPINTRODUCTION,能够提升你的伤害,This can increase your damage,ダメージを増やすことができます
+SHOOTSPEEDUP,攻速提升,Attack speed increase,攻撃速度アップ
+SHOOTSPEEDUPINTRODUCTION,能够提升你的攻击速度,This can increase your attack speed,攻撃速度を上げることができる
+REPELUP,击退增强,Repel enhancing,撃退増強
+REPELUPINTRODUCTION,增加你对敌人的击退,Increase your ability to repel enemies,敵への撃退力を増加させる
+SPEEDUP,速度提升,Speed increase,スピードアップ
+SPEEDUPINTRODUCTION,提升你的移动速度,Improve your movement speed,あなたの移動速度を向上させる
+LIFEUP,生命提升,Life enhancement,ライフアップ
+LIFEUPINTRODUCTION,增加你的生命上限,Increase your life limit,ライフ上限を増やす
+SHELL9MMINTRODUCTION,获得50发9mm子弹，适用于手枪与冲锋枪,"Get 50 rounds of 9mm bullets, suitable for pistols and submachine guns",9mm弾50発を入手、ピストルとサブマシンガンに適用
+SHELL762MMINTRODUCTION,获得50发7.62mm子弹，适用于加特林与狙击枪,"Get 50 rounds of 7.62mm bullets, suitable for Gatling and sniper guns",7.62mm弾50発を入手、ガトリング銃とスナイパーライフルに対応
+SHELL12INTRODUCTION,获得20发12号霰弹，适用于霰弹枪,"Get 20 rounds of 12 gauge shotgun shells, suitable for shotguns",20発の12ゲージ弾薬を入手、ショットガンに適用
+SHELL,炮弹,Shell,砲弾
+SHELLINTRODUCTION,获得30发炮弹，适用于炮塔,"Obtain 30 shells,suitable for turrets",30発の砲弾を獲得し、砲塔に適用可能
+AUTOBULLETBUYING,自动购买子弹,Auto ammo,弾丸を自動購入
+AUTOBULLETBUYINGINTRODUCTION,在你的弹药不足时帮你自动购买,Automatically purchase when your ammunition is low,あなたの弾薬が不足したときに自動的に購入してあげる
+SUBMACHINEGUN1,冲锋枪,submachine gun,サブマシンガン
+SUBMACHINEGUN1INTRODUCTION,使用9mm子弹，射速较快,"Using 9mm bullets, with a fast firing rate",9mm弾を使用し、射速が速い
+GATLIN1,加特林,Gatlin,ガトリング
+GATLIN1INTRODUCTION,使用7.62mm子弹，射速快,"Using 7.62mm bullets, fast firing rate",7.62mm弾を使用し、射速が速い
+SHOTGUN1,霰弹枪,Shotgun,ショットガン
+SHOTGUN1INTRODUCTION,使用12号霰弹，射速较慢，但每次向前方发射多发子弹,"Using 12 gauge shotgun shells, the firing rate is slower, but multiple bullets are fired each time",12ゲージのショットガンを使用し、射速は遅いが前方に一度に多数の弾丸を発射する
+SNIPERGUN1,狙击枪,Sniper gun,スナイパーライフル
+SNIPERGUN1INTRODUCTION,使用7.62mm子弹，射速慢，伤害高，自带激光瞄准,"Using 7.62mm bullets, slow firing rate, high damage, with built-in laser sight",7.62mm弾を使用し、射速は遅いがダメージが高く、レーザー照準を備えている
+BANDAGE,绷带,Bandage,包帯
+BANDAGEINTRODUCTION,使用：回复30点血量,"Use: Reply to 30 HP",使用：30のHPを回復する
+ENERGYDRINKS,夯大力饮料,Energy drinks,エナジードリンク
+ENERGYDRINKSINTRODUCTION,使用：在30秒内增加你的速度为2倍,Use: Increase your speed by 2 times within 30 seconds,使用：30秒間あなたの速度を2倍に増加させる
+PRECISE,激光瞄准,Laser sight,レーザー照準
+PRECISEINTRODUCTION,从你的武器向前发射一道激光以预览子弹的轨迹,Launch a laser forward from your weapon to preview the trajectory of the bullet,あなたの武器から前方にレーザーを発射して、弾丸の軌道をプレビューします
+TURRUT,炮塔,Turrut,砲塔
+TURRUTINTRODUCTION,使用：放置在场上，消耗炮弹进行射击,"Use: Place on the field, consume shells for shooting",使用：フィールドに配置し、砲弾を消費して射撃する
+GENETARGETEDBOMB,基因靶向弹,Gene Targeted Bomb,遺伝子標的弾
+GENETARGETEDBOMBINTRODUCTION,使用：在你的位置呼叫基因靶向弹，对大范围的僵尸造成巨量伤害,Use: Call gene targeted bullets at your location to deal massive damage to zombies on a large scale,使用：君の位置で遺伝子ターゲット弾を発射し、広範囲のゾンビに大ダメージを与える
+PURCHASED,已购买,Purchased,購入済み
+NOTENOUGHCOINS,你的金币不够,Your coins are not enough,あなたのコインが足りません
+COINS,金币, Coins,コイン
+PROPSWITCHED,道具已切换,Prop switched,道具が切り替わりました
+SUBMACHINEGUN2,三头冲锋枪,Submachine Gun Pro,三丁目のサブマシンガン
+SUBMACHINEGUN2INTRODUCTION,每次额外发射两发子弹，但削弱单发子弹且射速减少,Fires extra bullets but weaker per shot and slower fire rate,毎回2発追加で発射するが、単発の弾丸は弱められ、射速も減少する
+GATLIN2,狂暴加特林,Raging Gatling,バーサークガトリング
+GATLIN2INTRODUCTION,每次额外发射一发子弹，且射速提升,Fires an extra bullet per shot and has faster fire rate,毎回追加で1発の弾を発射し、射速も向上する
+PRECISE2,精准射击,Precision Shooting,精密射撃
+PRECISE2INTRODUCTION,你的角色将面向鼠标,Your character will face the mouse cursor,あなたのキャラクターはマウスに向かいます
+SHOTGUN2, , , 
+SHOTGUN2INTRODUCTION, , , 
+SNIPERGUN2, , , 
+SNIPERGUN2INTRODUCTION, , , 
+NOTENOUGHBANDAGE,绷带数量不足,Insufficient bandages,包帯が不足しています
+FULLHPNOUSE,满血无法使用,Full HP cannot be used,フルパワー使用不可
+USINGBANDAGE,绷带使用中,Using bandage,包帯使用中
+NOTENOUGHDRINKS,夯大力饮料数量不足,Insufficient energy drinks,エネルギー飲料の数量が不足している
+USINGENERGYDRINKS,夯大力饮料使用中,Using energy drinks,エナジードリンク使用中
+NOTENOUGHTURRUTS,炮塔数量不足,Insufficient turruts,砲塔の数が不足している
+TURRUTPLACED,已放置炮塔,The turret has been placed,タレットを設置しました
+NOTENOUGHGENETARGETEDBOMB,基因靶向弹数量不足,Insufficient Gene Targeted Bomb,遺伝子ターゲット弾の数が不足している
+GENETARGETEDBOMBLAUNCHED,已发射基因靶向弹,Gene targeted bomb has been launched,遺伝子ターゲット弾を発射済み
+NOTENOUGHBULLETS,子弹不足,Insufficient bullets,弾が足りない
+STARTGAME,开始游戏,Start Game,スタート
+CURRENTLANGUAGE,当前语言：中文,Current Language:English,現在の言語：日本語

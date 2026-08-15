@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://52u5kya58yhc"]
+
+[ext_resource type="Texture2D" uid="uid://1i3l8p1abn36" path="res://resources/草.png" id="1_kl2qe"]
+
+[node name="grass" type="Sprite2D" unique_id=1683961371]
+z_index = -1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_kl2qe")

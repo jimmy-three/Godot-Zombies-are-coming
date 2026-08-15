@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cbbsr00acgbee"]
+
+[ext_resource type="Script" uid="uid://buvp4cybislyv" path="res://turrut.gd" id="1_tintn"]
+[ext_resource type="Texture2D" uid="uid://bax0yk8aao6rv" path="res://resources/炮台.png" id="2_pteax"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvhbo"]
+radius = 11.0
+
+[node name="turrut" type="StaticBody2D" unique_id=2023924489]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_tintn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1209078502]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pteax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2111805866]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_wvhbo")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=835561733]
+wait_time = 0.3
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

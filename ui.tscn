@@ -1,0 +1,783 @@
+[gd_scene format=3 uid="uid://bq2ktp11y0fkw"]
+
+[ext_resource type="Script" uid="uid://c0qq3c2g1b7bd" path="res://ui.gd" id="1_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://fx2t6hpwdak8" path="res://resources/伤害提升图标.png" id="2_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://hsxhnpk78rcd" path="res://resources/射速提升图标.png" id="3_nltto"]
+[ext_resource type="Texture2D" uid="uid://dmvn6ycobmj4i" path="res://resources/击退提升图标.png" id="4_ibotj"]
+[ext_resource type="Texture2D" uid="uid://clfybxxb3vjl0" path="res://resources/速度提升图标.png" id="5_e2l4f"]
+[ext_resource type="Texture2D" uid="uid://d1b83l8nh2ndy" path="res://resources/生命提升图标.png" id="6_n5rqp"]
+[ext_resource type="Texture2D" uid="uid://dveeb4ovm7aft" path="res://resources/9mm子弹.png" id="7_gs482"]
+[ext_resource type="Texture2D" uid="uid://b7ajdoxncxfw4" path="res://resources/7.62mm子弹.png" id="8_cxd00"]
+[ext_resource type="Texture2D" uid="uid://n7gosghcqql" path="res://resources/12号霰弹.png" id="9_etlur"]
+[ext_resource type="Texture2D" uid="uid://rmlj2wmisleo" path="res://resources/小型炮弹图标.png" id="10_7rqds"]
+[ext_resource type="Texture2D" uid="uid://8hlln50bj7ji" path="res://resources/自动购买子弹.png" id="11_nvb2n"]
+[ext_resource type="Texture2D" uid="uid://dq7od1l8jjk3f" path="res://resources/AK图标.png" id="12_sosvr"]
+[ext_resource type="Texture2D" uid="uid://dq3op6bn4862i" path="res://resources/加特林图标.png" id="13_ndy3v"]
+[ext_resource type="Texture2D" uid="uid://b4p2nwxe4nrtc" path="res://resources/散弹枪图标.png" id="14_x2s2p"]
+[ext_resource type="Texture2D" uid="uid://dlsyiy63iogcl" path="res://resources/狙击枪图标.png" id="15_v8jk5"]
+[ext_resource type="Texture2D" uid="uid://0uhikupilqgo" path="res://resources/已售罄.png" id="16_cka8k"]
+[ext_resource type="Texture2D" uid="uid://cgp6d7ygjv5do" path="res://resources/绷带.png" id="17_53buu"]
+[ext_resource type="Texture2D" uid="uid://ctwajy4ff7qj8" path="res://resources/狙击射击.png" id="19_ccnxy"]
+[ext_resource type="Texture2D" uid="uid://cbw6iamvpnc8d" path="res://resources/炮台图标.png" id="20_r2460"]
+[ext_resource type="Texture2D" uid="uid://ckbkq1e2c7hxt" path="res://resources/导弹图标.png" id="21_gxnlh"]
+[ext_resource type="Texture2D" uid="uid://ds3laetvqxg1" path="res://resources/夯大力饮料.png" id="21_ndy3v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sosvr"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndy3v"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvhbo"]
+corner_radius_top_left = 500
+corner_radius_top_right = 500
+corner_radius_bottom_right = 500
+corner_radius_bottom_left = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyqef"]
+bg_color = Color(0.67058825, 0.67058825, 0.67058825, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.2231029, 0.2231029, 0.22310287, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fyqef"]
+color = Color(0.15127608, 0.15127608, 0.15127608, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wvhbo"]
+color = Color(0.12591085, 0.12591085, 0.12591082, 1)
+grow_begin = 300.0
+grow_end = 218.0
+
+[node name="UI" type="CanvasLayer" unique_id=1348119941]
+script = ExtResource("1_m6e0p")
+
+[node name="FPS" type="Label" parent="." unique_id=1704509605]
+offset_left = 4.0
+offset_top = 629.0
+offset_right = 76.0
+offset_bottom = 669.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "FPS"
+
+[node name="Coin" type="Label" parent="." unique_id=159973977]
+offset_left = 360.0
+offset_top = -3.0
+offset_right = 517.0
+offset_bottom = 39.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "金币:100000"
+
+[node name="Difficulty" type="Label" parent="." unique_id=877349083]
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 77.0
+offset_bottom = 39.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "难度:100"
+
+[node name="Life" type="Label" parent="." unique_id=1093881295]
+offset_left = 193.0
+offset_top = -2.0
+offset_right = 335.0
+offset_bottom = 40.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "血量:10000"
+
+[node name="LeftBullet" type="Label" parent="." unique_id=1448319274]
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 279.0
+offset_bottom = 75.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "剩余9mm子弹：10000"
+
+[node name="PropsProgressBar" type="ProgressBar" parent="." unique_id=54020360]
+visible = false
+offset_left = 964.0
+offset_top = 618.0
+offset_right = 1143.0
+offset_bottom = 641.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sosvr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ndy3v")
+value = 50.0
+
+[node name="PropSwitchPanel" type="Panel" parent="." unique_id=878868916]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.5
+offset_top = -200.5
+offset_right = 200.5
+offset_bottom = 200.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wvhbo")
+
+[node name="SwitchBandage" type="Button" parent="PropSwitchPanel" unique_id=467449619]
+layout_mode = 0
+offset_left = 38.5
+offset_top = 171.5
+offset_right = 97.5
+offset_bottom = 232.5
+theme_override_constants/icon_max_width = 50
+icon = ExtResource("17_53buu")
+
+[node name="SwitchEnergyDrinks" type="Button" parent="PropSwitchPanel" unique_id=988871906]
+layout_mode = 0
+offset_left = 92.5
+offset_top = 61.5
+offset_right = 151.5
+offset_bottom = 122.5
+theme_override_constants/icon_max_width = 50
+icon = ExtResource("21_ndy3v")
+
+[node name="SwitchTurrut" type="Button" parent="PropSwitchPanel" unique_id=346577874]
+layout_mode = 0
+offset_left = 240.5
+offset_top = 61.5
+offset_right = 299.5
+offset_bottom = 122.5
+theme_override_constants/icon_max_width = 50
+icon = ExtResource("20_r2460")
+
+[node name="SwitchGeneTargetedBomb" type="Button" parent="PropSwitchPanel" unique_id=1749088430]
+layout_mode = 0
+offset_left = 304.5
+offset_top = 174.5
+offset_right = 363.5
+offset_bottom = 235.5
+theme_override_constants/icon_max_width = 50
+icon = ExtResource("21_gxnlh")
+
+[node name="PauseMenu" type="Panel" parent="." unique_id=222984254]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -315.0
+offset_top = -230.0
+offset_right = 315.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fyqef")
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu" unique_id=231499029]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 428.0
+offset_top = 6.0
+offset_right = 432.0
+offset_bottom = 454.0
+
+[node name="HSeparator" type="HSeparator" parent="PauseMenu" unique_id=1064984100]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 300.0
+offset_right = 624.0
+offset_bottom = 304.0
+theme_override_styles/separator = SubResource("StyleBoxLine_fyqef")
+
+[node name="Title" type="Label" parent="PauseMenu" unique_id=985855523]
+layout_mode = 0
+offset_left = 183.0
+offset_right = 247.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "商店"
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenu" unique_id=1116080440]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 129.0
+offset_right = 625.0
+offset_bottom = 171.0
+
+[node name="GoodName" type="Label" parent="PauseMenu/CenterContainer" unique_id=288365883]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "商品名字"
+
+[node name="CenterContainer2" type="CenterContainer" parent="PauseMenu" unique_id=1667347796]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 159.0
+offset_right = 569.0
+offset_bottom = 187.0
+
+[node name="GoodPrice" type="Label" parent="PauseMenu/CenterContainer2" unique_id=22972459]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 13
+text = "价格"
+
+[node name="IntroductionScroller" type="ScrollContainer" parent="PauseMenu" unique_id=1337927678]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 186.0
+offset_right = 622.0
+offset_bottom = 300.0
+
+[node name="Introduction" type="Label" parent="PauseMenu/IntroductionScroller" unique_id=905371575]
+custom_maximum_size = Vector2(185, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "商品介绍"
+autowrap_mode = 3
+
+[node name="PreviewBox" type="TextureRect" parent="PauseMenu" unique_id=642701675]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 40.0
+offset_right = 574.0
+offset_bottom = 133.0
+texture = ExtResource("16_cka8k")
+
+[node name="Sensitivity" type="Label" parent="PauseMenu" unique_id=298472297 groups=["Unified_translated_labels"]]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 306.0
+offset_right = 61.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "旋转灵敏度"
+metadata/Key = "SENSITIVITY"
+
+[node name="SensitivitySlider" type="HSlider" parent="PauseMenu/Sensitivity" unique_id=400403515]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 5.0
+offset_right = 203.0
+offset_bottom = 21.0
+min_value = 1.0
+max_value = 10.0
+value = 2.0
+
+[node name="Value" type="Label" parent="PauseMenu/Sensitivity" unique_id=1299343169]
+layout_mode = 0
+offset_left = 210.0
+offset_right = 250.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2"
+
+[node name="LaserSight" type="Label" parent="PauseMenu" unique_id=156296776 groups=["Unified_translated_labels"]]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 329.0
+offset_right = 109.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "开启激光瞄准"
+metadata/Key = "LOCKED"
+
+[node name="LaserCheckBox" type="CheckBox" parent="PauseMenu/LaserSight" unique_id=1984501819]
+layout_mode = 0
+offset_left = 97.0
+offset_right = 121.0
+offset_bottom = 24.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PauseMenu" unique_id=1098640265]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 47.0
+offset_right = 427.0
+offset_bottom = 297.0
+
+[node name="GoodsList" type="VBoxContainer" parent="PauseMenu/ScrollContainer" unique_id=21751782]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Plus" type="HBoxContainer" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=1406543299]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=66106548 groups=["Unified_translated_labels"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 20
+text = "增
+益"
+metadata/Key = "PLUS"
+
+[node name="DamageUp" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=746752551 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("2_m6e0p")
+metadata/Name = "伤害提升"
+metadata/Introduction = "能够提升你的伤害"
+metadata/Price = "30"
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=1695854600]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="ShootSpeedUp" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=1149081935 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("3_nltto")
+metadata/Name = "攻速提升"
+metadata/Introduction = "能够提升你的攻击速度"
+metadata/Price = "40"
+
+[node name="VSeparator2" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=622925760]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="RepelUp" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=1214824646 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("4_ibotj")
+metadata/Name = "击退增强"
+metadata/Introduction = "增加你对敌人的击退"
+metadata/Price = "30"
+
+[node name="VSeparator3" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=940817901]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="SpeedUp" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=623688667 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("5_e2l4f")
+metadata/Name = "速度提升"
+metadata/Introduction = "提升你的移动速度"
+metadata/Price = "30"
+
+[node name="VSeparator4" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=2037495669]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="LifeUp" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Plus" unique_id=1457716260 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("6_n5rqp")
+metadata/Name = "生命提升"
+metadata/Introduction = "增加你的生命上限"
+metadata/Price = "30"
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=1977692849]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wvhbo")
+
+[node name="Bullet" type="HBoxContainer" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=41797496]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=52612804 groups=["Unified_translated_labels"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 20
+text = "子
+弹"
+metadata/Key = "BULLETS"
+
+[node name="9mmBullet" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=1078815012 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("7_gs482")
+metadata/Name = "9mm子弹"
+metadata/Introduction = "获得50发9mm子弹，适用于手枪与冲锋枪"
+metadata/Price = "60"
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=1240816547]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="762mmBullet" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=2019865001 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("8_cxd00")
+metadata/Name = "7.62mm子弹"
+metadata/Introduction = "获得50发7.62mm子弹，适用于加特林与狙击枪"
+metadata/Price = "80"
+
+[node name="VSeparator2" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=755146178]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="No12Bullet" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=1298758819 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("9_etlur")
+metadata/Name = "12号霰弹"
+metadata/Introduction = "获得20发12号霰弹，适用于霰弹枪"
+metadata/Price = "50"
+
+[node name="VSeparator3" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=1593859944]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="Shell" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=1350973513 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("10_7rqds")
+metadata/Name = "炮弹"
+metadata/Introduction = "获得30发炮弹，适用于炮塔"
+metadata/Price = "50"
+
+[node name="VSeparator4" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=2145059713]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="AutoBulletBuying" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Bullet" unique_id=964243137 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("11_nvb2n")
+metadata/Name = "自动购买子弹"
+metadata/Introduction = "在你的弹药不足时帮你自动购买"
+metadata/Price = "100"
+
+[node name="VSeparator2" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=316422504]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wvhbo")
+
+[node name="Weapon" type="HBoxContainer" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=567466935]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=1741600553 groups=["Unified_translated_labels"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 20
+text = "枪
+械"
+metadata/Key = "GUNS"
+
+[node name="AK" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=1247517446 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("12_sosvr")
+metadata/Name = "冲锋枪"
+metadata/Introduction = "使用9mm子弹，射速较快"
+metadata/Price = "80"
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=1050644409]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="Gatlin" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=870840024 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("13_ndy3v")
+metadata/Name = "加特林"
+metadata/Introduction = "使用7.62mm子弹，射速快"
+metadata/Price = "200"
+
+[node name="VSeparator2" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=246333914]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="ShotGun" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=456836325 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("14_x2s2p")
+metadata/Name = "霰弹枪"
+metadata/Introduction = "使用12号霰弹，射速较慢，但每次向前方发射多发子弹"
+metadata/Price = "130"
+
+[node name="VSeparator3" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=1440506826]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="SniperGun" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=93958070 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("15_v8jk5")
+metadata/Name = "狙击枪"
+metadata/Introduction = "使用7.62mm子弹，射速慢,伤害高，自带激光瞄准"
+metadata/Price = "100"
+
+[node name="VSeparator4" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=2020444816]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="Nothing" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Weapon" unique_id=1076357773 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("16_cka8k")
+metadata/Name = "无"
+metadata/Introduction = "无"
+metadata/Price = "0"
+
+[node name="VSeparator3" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=1668204326]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_wvhbo")
+
+[node name="Prop" type="HBoxContainer" parent="PauseMenu/ScrollContainer/GoodsList" unique_id=647372327]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Label" type="Label" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=1023787643 groups=["Unified_translated_labels"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_font_sizes/font_size = 20
+text = "道
+具"
+metadata/Key = "PROPS"
+
+[node name="Bandage" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=333780355 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("17_53buu")
+metadata/Name = "绷带"
+metadata/Introduction = "使用：回复30点血量"
+metadata/Price = "20"
+
+[node name="VSeparator" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=1199255011]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="EneygyDrinks" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=950875561 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("21_ndy3v")
+metadata/Name = "能量饮料"
+metadata/Introduction = "使用：在30秒内增加你的速度为2倍"
+metadata/Price = "30"
+
+[node name="VSeparator2" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=728178559]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="Precise" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=2062551701 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("19_ccnxy")
+metadata/Name = "激光瞄准"
+metadata/Introduction = "从你的武器向前发射一道激光以预览子弹的轨迹"
+metadata/Price = "50"
+
+[node name="VSeparator3" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=502267290]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="Turrut" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=1028752921 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("20_r2460")
+metadata/Name = "炮塔"
+metadata/Introduction = "使用：放置在场上，消耗炮弹进行射击"
+metadata/Price = "300"
+
+[node name="VSeparator4" type="VSeparator" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=1483923987]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+
+[node name="GeneTargetedBomb" type="Button" parent="PauseMenu/ScrollContainer/GoodsList/Prop" unique_id=1353438861 groups=["ShopButtons"]]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_constants/icon_max_width = 60
+action_mode = 0
+icon = ExtResource("21_gxnlh")
+metadata/Name = "基因靶向弹"
+metadata/Introduction = "使用：在你的位置呼叫基因靶向弹，对大范围的僵尸造成巨量伤害"
+metadata/Price = "1000"
+
+[node name="CharacterStatus" type="VSplitContainer" parent="PauseMenu" unique_id=68061529]
+layout_mode = 0
+offset_left = 433.0
+offset_top = 301.0
+offset_right = 617.0
+offset_bottom = 453.0
+theme_override_constants/separation = 1
+split_offsets = PackedInt32Array(0, 0, 0, 0)
+
+[node name="MaxLife" type="Label" parent="PauseMenu/CharacterStatus" unique_id=1142495313]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "最大生命值：10000"
+
+[node name="Speed" type="Label" parent="PauseMenu/CharacterStatus" unique_id=1248959243]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "速度：1000"
+
+[node name="Damage" type="Label" parent="PauseMenu/CharacterStatus" unique_id=667185987]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "攻击间隔倍率：0.01"
+
+[node name="ShootInterval" type="Label" parent="PauseMenu/CharacterStatus" unique_id=1017090742]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "伤害加成：1000"
+
+[node name="Repel" type="Label" parent="PauseMenu/CharacterStatus" unique_id=1091588445]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "击退加成：1000"
+
+[node name="Language" type="Label" parent="PauseMenu" unique_id=988953302 groups=["Unified_translated_labels"]]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 330.0
+offset_right = 199.0
+offset_bottom = 354.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "语言切换"
+metadata/Key = "LANGUAGE"
+
+[node name="LanguageOption" type="OptionButton" parent="PauseMenu/Language" unique_id=1724858929]
+layout_mode = 0
+offset_left = 78.0
+offset_top = -2.0
+offset_right = 182.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 16
+item_count = 3
+popup/item_0/text = "简体中文"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+popup/item_2/text = "日本語"
+popup/item_2/id = 2
+
+[node name="DeathTip" type="Panel" parent="." unique_id=203145450]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -238.5
+offset_right = 300.5
+offset_bottom = 238.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="DeathTip" unique_id=1107976497]
+layout_mode = 0
+offset_left = 1.5
+offset_top = 59.5
+offset_right = 599.5
+offset_bottom = 132.5
+
+[node name="Title" type="Label" parent="DeathTip/CenterContainer2" unique_id=1611168349 groups=["Unified_translated_labels"]]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "你死了"
+metadata/Key = "DEAD"
+
+[node name="CenterContainer" type="CenterContainer" parent="DeathTip" unique_id=776121572]
+layout_mode = 0
+offset_left = 0.5
+offset_top = 152.5
+offset_right = 600.5
+offset_bottom = 196.5
+
+[node name="Difficulty" type="Label" parent="DeathTip/CenterContainer" unique_id=1394173559]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "到达难度100"
+metadata/Key = "TODIFFICULTY"
+
+[node name="Retry" type="Button" parent="DeathTip" unique_id=585227833 groups=["Unified_translated_labels"]]
+layout_mode = 0
+offset_left = 222.5
+offset_top = 346.5
+offset_right = 368.5
+offset_bottom = 427.5
+text = "重新开始"
+
+[connection signal="pressed" from="PropSwitchPanel/SwitchBandage" to="." method="_on_switch_bandage_pressed"]
+[connection signal="pressed" from="PropSwitchPanel/SwitchEnergyDrinks" to="." method="_on_switch_energy_drinks_pressed"]
+[connection signal="pressed" from="PropSwitchPanel/SwitchTurrut" to="." method="_on_switch_turrut_pressed"]
+[connection signal="pressed" from="PropSwitchPanel/SwitchGeneTargetedBomb" to="." method="_on_switch_gene_targeted_bomb_pressed"]
+[connection signal="value_changed" from="PauseMenu/Sensitivity/SensitivitySlider" to="." method="_on_sensitivity_slider_value_changed"]
+[connection signal="toggled" from="PauseMenu/LaserSight/LaserCheckBox" to="." method="_on_laser_check_box_toggled"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp" to="." method="_on_damage_up_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/ShootSpeedUp" to="." method="_on_shoot_speed_up_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/RepelUp" to="." method="_on_repel_up_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/SpeedUp" to="." method="_on_speed_up_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/LifeUp" to="." method="_on_life_up_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Bullet/9mmBullet" to="." method="_on_9mm_bullet_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Bullet/762mmBullet" to="." method="_on_762mm_bullet_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Bullet/No12Bullet" to="." method="_on_no_12_bullet_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Bullet/Shell" to="." method="_on_shell_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Bullet/AutoBulletBuying" to="." method="_on_auto_bullet_buying_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Weapon/AK" to="." method="_on_ak_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Weapon/Gatlin" to="." method="_on_gatlin_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Weapon/ShotGun" to="." method="_on_shot_gun_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Weapon/SniperGun" to="." method="_on_sniper_gun_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/Bandage" to="." method="_on_bandage_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/EneygyDrinks" to="." method="_on_eneygy_drinks_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/Precise" to="." method="_on_precise_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/Turrut" to="." method="_on_turrut_pressed"]
+[connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/GeneTargetedBomb" to="." method="_on_gene_targeted_bomb_pressed"]
+[connection signal="item_selected" from="PauseMenu/Language/LanguageOption" to="." method="_on_language_option_item_selected"]
+[connection signal="pressed" from="DeathTip/Retry" to="." method="_on_retry_pressed"]

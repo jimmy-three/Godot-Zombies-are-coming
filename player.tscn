@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dclr6mmasrghq"]
+
+[ext_resource type="Texture2D" uid="uid://bpoj2qx0y5k34" path="res://resources/人物.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://5gcx82vxcu2x" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cdccvcefpsj2e" path="res://resources/AK.png" id="3_b26j0"]
+[ext_resource type="Texture2D" uid="uid://6502r8lfsa2" path="res://resources/手枪.png" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cunig6yrxrqbv" path="res://resources/加特林.png" id="4_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://bvriesmf45vi8" path="res://resources/三头AK.png" id="4_nvl01"]
+[ext_resource type="Texture2D" uid="uid://vua62tjvllkt" path="res://resources/加特林2.png" id="5_nvl01"]
+[ext_resource type="Texture2D" uid="uid://b4ej8hrd0kctk" path="res://resources/加特林3.png" id="6_ivps1"]
+[ext_resource type="Texture2D" uid="uid://vimk1wp0wqxe" path="res://resources/狂暴加特林.png" id="8_ivps1"]
+[ext_resource type="Texture2D" uid="uid://iyjnbvhslgt0" path="res://resources/散弹枪.png" id="8_urp6f"]
+[ext_resource type="Texture2D" uid="uid://dseak4oknltsb" path="res://resources/狙击枪.png" id="9_bwjto"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4flbx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifow5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b26j0")
+}],
+"loop": 1,
+"name": &"AK1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nvl01")
+}],
+"loop": 1,
+"name": &"AK2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nvl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ivps1")
+}],
+"loop": 1,
+"name": &"gatlin1",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ivps1")
+}],
+"loop": 1,
+"name": &"gatlin2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_i3pqv")
+}],
+"loop": 1,
+"name": &"pistol1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_urp6f")
+}],
+"loop": 1,
+"name": &"shotgun1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bwjto")
+}],
+"loop": 1,
+"name": &"sniper_gun1",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvhbo"]
+
+[node name="player" type="CharacterBody2D" unique_id=1939994277]
+z_index = 1
+collision_mask = 28
+script = ExtResource("1_onrkg")
+
+[node name="Person" type="AnimatedSprite2D" parent="." unique_id=1901977597]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+
+[node name="gun" type="AnimatedSprite2D" parent="." unique_id=1501567997]
+position = Vector2(25.999998, 0)
+scale = Vector2(0.57352936, 0.5735294)
+sprite_frames = SubResource("SpriteFrames_ifow5")
+animation = &"gatlin2"
+
+[node name="Marker2D" type="Marker2D" parent="gun" unique_id=2020193506]
+position = Vector2(-6.799999, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=826560565]
+shape = SubResource("CircleShape2D_wvhbo")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1804294650]
+wait_time = 0.33
+
+[node name="BulletTipTimer" type="Timer" parent="." unique_id=1388661351]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bwmmgbbg1e0ao"]
+
+[ext_resource type="Script" uid="uid://bsapycbe5h48c" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Texture2D" uid="uid://ka8bg2aahppn" path="res://resources/金币.png" id="1_d5gmh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d5gmh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvhbo"]
+radius = 4.1231055
+
+[node name="Coin" type="Area2D" unique_id=658372713]
+collision_layer = 16
+script = ExtResource("1_0t63x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=294289559]
+position = Vector2(1.1920929e-07, 1.1920929e-07)
+scale = Vector2(0.5681819, 0.5681819)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=248895178]
+shape = SubResource("CircleShape2D_wvhbo")
+
+[node name="ScatterTimer" type="Timer" parent="." unique_id=2056120600]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="ScatterTimer" to="." method="_on_scatter_timer_timeout"]

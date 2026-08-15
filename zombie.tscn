@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://67d3vqpwe7yf"]
+
+[ext_resource type="Texture2D" uid="uid://bybse0akmshs0" path="res://resources/普通僵尸.png" id="1_lnshm"]
+[ext_resource type="Script" uid="uid://cl8lbxjthhuqx" path="res://zombie.gd" id="1_x5rsa"]
+[ext_resource type="Texture2D" uid="uid://c0ev164clf8cd" path="res://resources/僵尸Boss·普通.png" id="2_x5rsa"]
+[ext_resource type="Texture2D" uid="uid://b6rd8v1w33qdk" path="res://resources/侦查兵僵尸.png" id="3_ogcpr"]
+[ext_resource type="Texture2D" uid="uid://cg3ufqy1x5wvq" path="res://resources/僵尸Boss·侦查兵.png" id="4_i82o5"]
+[ext_resource type="Texture2D" uid="uid://c5eldsibq34jo" path="res://resources/士兵僵尸.png" id="5_jw3ev"]
+[ext_resource type="Texture2D" uid="uid://0co4mauopyb0" path="res://resources/僵尸Boss·士兵.png" id="6_x4h2d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lnshm")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x5rsa")
+}],
+"loop": 1,
+"name": &"normal boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ogcpr")
+}],
+"loop": 1,
+"name": &"scout",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i82o5")
+}],
+"loop": 1,
+"name": &"scout boss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_jw3ev")
+}],
+"loop": 1,
+"name": &"soldier",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_x4h2d")
+}],
+"loop": 1,
+"name": &"soldier boss",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvhbo"]
+
+[node name="zombie" type="Area2D" unique_id=1150782206]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_x5rsa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1570125076]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+animation = &"normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141327627]
+shape = SubResource("CircleShape2D_wvhbo")
+debug_color = Color(0.99623126, 0, 0.19929612, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b6cu7u7s3m1i1"]
+
+[ext_resource type="Script" uid="uid://bee15w3i1g2ku" path="res://tip.gd" id="1_vk2th"]
+
+[node name="Tip" type="PopupPanel" unique_id=568231363]
+oversampling_override = 1.0
+title = "提示"
+initial_position = 2
+size = Vector2i(300, 40)
+visible = true
+script = ExtResource("1_vk2th")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2024631900]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 36.0
+
+[node name="Text" type="Label" parent="CenterContainer" unique_id=205864590]
+layout_mode = 2
+text = "文本"
+
+[node name="ShowTimer" type="Timer" parent="." unique_id=1466934569]
+
+[connection signal="timeout" from="ShowTimer" to="." method="_on_show_timer_timeout"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://vwmr4f0mrkoq"]
+
+[ext_resource type="Script" uid="uid://pngbftbehkjf" path="res://gene_targeted_bomb.gd" id="1_eiuax"]
+[ext_resource type="Texture2D" uid="uid://la2gny42tnwg" path="res://resources/导弹.png" id="2_f1ner"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wvhbo"]
+radius = 480.0
+
+[node name="GeneTargetedBomb" type="Area2D" unique_id=426986269]
+z_index = 2
+collision_layer = 32
+collision_mask = 4
+script = ExtResource("1_eiuax")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1217853124]
+position = Vector2(-2, -58)
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("2_f1ner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=88897687]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_wvhbo")
+disabled = true
