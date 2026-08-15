@@ -52,11 +52,17 @@
 ## 📁 项目结构
 
 Godot-Zombies-are-coming/
+
 ├── addons/          # 插件
+
 ├── resources/       # 图片 / 音频 / 字体
+
 ├── translations/    # 多语言翻译
+
 ├── *.tscn           # 场景文件
+
 ├── *.gd             # 脚本
+
 └── project.godot    # 项目配置
 
 ---
