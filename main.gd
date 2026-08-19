@@ -49,11 +49,16 @@ func _on_zombie_spawn_timer_timeout() -> void: #僵尸生成
 	var spawn_pos = Global.pathFollow2D.global_position
 	var zombie = ZombiePool.get_zombie()
 	if zombie:
+		var type = 2
+		if Global.difficulty <= 30 or randi() % 100 > 30:
+			type = 2 * (randi() % 3 + 1)
+		else:
+			type = 2 * (randi() % 4 + 1)
 		zombie.global_position = spawn_pos
 		if not Global.BossSpawn:
-			zombie.type = 2 * (randi() % 3 + 1) - 1
+			zombie.type = type - 1
 		else:
-			zombie.type = 2 * (randi() % 3 + 1)
+			zombie.type = type
 			Global.BossSpawn = false
 		Global.Zombie_list.append(zombie)
 		zombie.reset()

@@ -3,9 +3,9 @@ extends Node
 var TipScene = preload("res://tip.tscn")
 
 #int
-var difficulty = 1
+var difficulty = 31
 var zombie_spawn_interval = 3.5 - 0.035 * difficulty if difficulty < 100 else 0.1
-var coin = 1000
+var coin = INF
 var max_life = 100
 var bullet_9mm = 50
 var bullet_762mm = 0
