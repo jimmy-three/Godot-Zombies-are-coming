@@ -681,6 +681,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "击退加成：1000"
 
+[node name="Quit" type="Button" parent="PauseMenu" unique_id=1966415221]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 419.0
+offset_right = 256.0
+offset_bottom = 451.0
+text = "退出游戏"
+
 [node name="Language" type="Label" parent="PauseMenu" unique_id=988953302 groups=["Unified_translated_labels"]]
 layout_mode = 0
 offset_left = 135.0
@@ -779,5 +787,6 @@ text = "重新开始"
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/Precise" to="." method="_on_precise_pressed"]
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/Turrut" to="." method="_on_turrut_pressed"]
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Prop/GeneTargetedBomb" to="." method="_on_gene_targeted_bomb_pressed"]
+[connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
 [connection signal="item_selected" from="PauseMenu/Language/LanguageOption" to="." method="_on_language_option_item_selected"]
 [connection signal="pressed" from="DeathTip/Retry" to="." method="_on_retry_pressed"]

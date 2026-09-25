@@ -17,6 +17,13 @@ func _on_language_pressed() -> void:
 	$StartGame.text = tr("STARTGAME")
 	$Language.text = tr("LANGUAGE")
 	$Language/CenterContainer/CurrentLanguage.text = tr("CURRENTLANGUAGE")
+	$Attribution.text = "Made with Godot · godotengine.org/license\n" + tr("NOCOMMERCIAL")
+	$GameInstruction.text = tr("GAMEINSTRUCTION")
+	$GameInstruction/Panel/CenterContainer/Title.text = tr("GAMEINSTRUCTION")
+	$GameInstruction/Panel/Instruction.text = tr("INSTRUCTIONCONTEXT")
 
 func _on_start_game_pressed() -> void:
 	get_tree().change_scene_to_file("res://main.tscn")
+
+func _on_game_instruction_pressed() -> void:
+	$GameInstruction/Panel.visible = not $GameInstruction/Panel.visible

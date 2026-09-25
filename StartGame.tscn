@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://dpxk1ejsixeey" path="res://start_game.gd" id="1_0yd1k"]
 [ext_resource type="Texture2D" uid="uid://dt3am8t64vyav" path="res://resources/开始游戏界面.png" id="1_yyg2i"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvhbo"]
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
 [node name="StartGame" type="Node2D" unique_id=780023700]
 script = ExtResource("1_0yd1k")
 
@@ -25,6 +31,47 @@ offset_bottom = 138.0
 theme_override_font_sizes/font_size = 35
 text = "开始游戏"
 
+[node name="GameInstruction" type="Button" parent="." unique_id=1531094233]
+offset_left = 915.0
+offset_top = 306.0
+offset_right = 1103.0
+offset_bottom = 407.0
+theme_override_font_sizes/font_size = 35
+text = "玩法说明"
+
+[node name="Panel" type="Panel" parent="GameInstruction" unique_id=430731742]
+visible = false
+layout_mode = 0
+offset_left = -813.0
+offset_top = -225.0
+offset_right = -129.0
+offset_bottom = 248.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wvhbo")
+
+[node name="CenterContainer" type="CenterContainer" parent="GameInstruction/Panel" unique_id=1898478246]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 672.0
+offset_bottom = 53.0
+
+[node name="Title" type="Label" parent="GameInstruction/Panel/CenterContainer" unique_id=499500024]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "玩法说明"
+
+[node name="Instruction" type="Label" parent="GameInstruction/Panel" unique_id=408025137]
+custom_maximum_size = Vector2(650, -1)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 61.0
+offset_right = 665.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "INSTRUCTIONCONTEXT"
+autowrap_mode = 2
+
 [node name="Language" type="Button" parent="." unique_id=1878716089]
 offset_left = 915.0
 offset_top = 160.0
@@ -45,5 +92,24 @@ offset_bottom = 142.0
 layout_mode = 2
 text = "当前语言：中文"
 
+[node name="Attribution" type="Label" parent="." unique_id=337512266]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 969.0
+offset_top = 616.0
+offset_right = 1147.0
+offset_bottom = 645.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.63375676, 0.6337568, 0.63375676, 1)
+theme_override_font_sizes/font_size = 8
+text = "Made with Godot · godotengine.org/license
+请勿用于商业用途或擅自打包上传"
+horizontal_alignment = 2
+
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="GameInstruction" to="." method="_on_game_instruction_pressed"]
 [connection signal="pressed" from="Language" to="." method="_on_language_pressed"]

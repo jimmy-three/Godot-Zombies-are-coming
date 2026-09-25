@@ -277,6 +277,7 @@ func _on_language_option_item_selected(index: int) -> void:
 	$PauseMenu/CharacterStatus/Damage.text = tr("DAMAGEUP") + ":" + str(player.shoot_damage_up)
 	$PauseMenu/CharacterStatus/ShootInterval.text = tr("SHOOTINTERVAL") + ":" + str(int(player.shoot_time_reduction * 100) * 0.01)
 	$PauseMenu/CharacterStatus/Repel.text = tr("REPELUP") + ":" + str(player.repel_up)
+	$PauseMenu/Quit.text = tr("QUIT")
 	
 	$PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp.set_meta("Name", tr("DAMAGEUP"))
 	$PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp.set_meta("Introduction", tr("DAMAGEUPINTRODUCTION"))
@@ -319,3 +320,6 @@ func _on_language_option_item_selected(index: int) -> void:
 	$PauseMenu/ScrollContainer/GoodsList/Prop/Turrut.set_meta("Introduction", tr("TURRUTINTRODUCTION"))
 	$PauseMenu/ScrollContainer/GoodsList/Prop/GeneTargetedBomb.set_meta("Name", tr("GENETARGETEDBOMB"))
 	$PauseMenu/ScrollContainer/GoodsList/Prop/GeneTargetedBomb.set_meta("Introduction", tr("GENETARGETEDBOMBINTRODUCTION"))
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()

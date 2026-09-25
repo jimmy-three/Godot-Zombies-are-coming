@@ -31,7 +31,6 @@ func _process(_delta : float) -> void:
 		$UI/DeathTip/CenterContainer/Difficulty.text = tr("TODIFFICULTY") % Global.difficulty
 		var tree = get_tree()
 		tree.paused = true
-	
 
 func fill_grass():
 	var grass_filler = grass_field.multimesh

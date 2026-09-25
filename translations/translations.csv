@@ -46,7 +46,7 @@ SHOTGUN1INTRODUCTION,使用12号霰弹，射速较慢，但每次向前方发射
 SNIPERGUN1,狙击枪,Sniper gun,スナイパーライフル
 SNIPERGUN1INTRODUCTION,使用7.62mm子弹，射速慢，伤害高，自带激光瞄准,"Using 7.62mm bullets, slow firing rate, high damage, with built-in laser sight",7.62mm弾を使用し、射速は遅いがダメージが高く、レーザー照準を備えている
 BANDAGE,绷带,Bandage,包帯
-BANDAGEINTRODUCTION,使用：回复30点血量,"Use: Reply to 30 HP",使用：30のHPを回復する
+BANDAGEINTRODUCTION,使用：回复30点血量,Use: Reply to 30 HP,使用：30のHPを回復する
 ENERGYDRINKS,夯大力饮料,Energy drinks,エナジードリンク
 ENERGYDRINKSINTRODUCTION,使用：在30秒内增加你的速度为2倍,Use: Increase your speed by 2 times within 30 seconds,使用：30秒間あなたの速度を2倍に増加させる
 PRECISE,激光瞄准,Laser sight,レーザー照準
@@ -81,3 +81,7 @@ GENETARGETEDBOMBLAUNCHED,已发射基因靶向弹,Gene targeted bomb has been la
 NOTENOUGHBULLETS,子弹不足,Insufficient bullets,弾が足りない
 STARTGAME,开始游戏,Start Game,スタート
 CURRENTLANGUAGE,当前语言：中文,Current Language:English,現在の言語：日本語
+NOCOMMERCIAL,请勿用于商业用途或擅自打包上传,Not for commercial use or unauthorized redistribution,商用利用・再配布はご遠慮ください
+GAMEINSTRUCTION,玩法说明,Instructions,やり方
+INSTRUCTIONCONTEXT,使用WASD移动你的角色，点击空格以射击，使用左右方向键以转向(或者在商店中购买面向鼠标道具)\n\n按下TAB进入商店与设置界面(包括语言选项)，再次按下TAB以返回\n\n长按Q键以选择装备的道具，按下E键以使用您装备的道具\n\n按下数字键(1~5)以切换武器,Move your character with WASD. Press SPACE to shoot. Use the LEFT/RIGHT arrow keys to turn (or buy mouse-aimed items in the shop)\n\nPress TAB to open the shop and settings (including language options). Press TAB again to return\n\nHold Q to select an equipped item. Press E to use your equipped item\n\nPress number keys (1~5) to switch weapons,WASDでキャラクターを移動します。SPACEで射撃します。左右の矢印キーで方向転換します（またはショップでマウス方向アイテムを購入可能）\n\nTABでショップと設定（言語オプション含む）を開きます。もう一度TABで戻ります\n\nQキー長押しで装備アイテムを選択します。Eキーで装備中のアイテムを使用します\n\n数字キー（1〜5）で武器を切り替えます
+QUIT,退出游戏,Quit,終了
