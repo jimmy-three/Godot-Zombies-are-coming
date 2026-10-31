@@ -17,6 +17,8 @@ var direction = Vector2.RIGHT
 var is_moving = true
 var self_repel = 0
 var player
+var damage_text
+var damage_text_scene = preload("res://damage_text.tscn")
 
 func _ready() -> void:
 	reset()
@@ -53,6 +55,21 @@ func _process(delta: float) -> void:
 
 func take_damage(damage, repel):
 	print("僵尸受伤，伤害：" + str(damage))
+	
+	if Global.damage_display:
+		if (not is_instance_valid(damage_text) or damage_text.is_queued_for_deletion()) or damage_text.get_node("ExistTimer").time_left <= 0.25:
+			damage_text = damage_text_scene.instantiate()
+			damage_text.text = str(int(damage))
+			damage_text.global_position = global_position - Vector2(15, 30)
+			get_parent().add_child(damage_text)
+		else:
+			damage_text.restart(global_position - Vector2(15, 30))
+			damage_text.text = str(int(damage) + int(damage_text.text))
+	
+	modulate = Color(1.5, 1.5, 1.5, 1.0)
+	var tween = create_tween()
+	tween.tween_property(self, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
+	
 	life -= damage
 	self_repel += repel
 	if life <= 0 and visible:
@@ -77,7 +94,7 @@ func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		is_moving = true
 
-func smart_move():
+func smart_move(): #左右躲子弹
 	var bullets = get_tree().get_nodes_in_group("bullets")
 	var distance
 	var min_distance = INF

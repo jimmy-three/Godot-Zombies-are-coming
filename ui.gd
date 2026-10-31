@@ -223,18 +223,22 @@ func _on_gene_targeted_bomb_pressed() -> void:
 func _on_switch_bandage_pressed() -> void:
 	Global.show_tip(tr("PROPSWITCHED"))
 	Global.prop_type = "bandage"
+	$TouchScreen/touch_screen_use_prop.texture_normal = load("res://resources/绷带.png")
 
 func _on_switch_energy_drinks_pressed() -> void:
 	Global.show_tip(tr("PROPSWITCHED"))
 	Global.prop_type = "energy_drinks"
+	$TouchScreen/touch_screen_use_prop.texture_normal = load("res://resources/夯大力饮料.png")
 
 func _on_switch_turrut_pressed() -> void:
 	Global.show_tip(tr("PROPSWITCHED"))
 	Global.prop_type = "turrut"
+	$TouchScreen/touch_screen_use_prop.texture_normal = load("res://resources/炮台图标.png")
 
 func _on_switch_gene_targeted_bomb_pressed() -> void:
 	Global.show_tip(tr("PROPSWITCHED"))
 	Global.prop_type = "gene_targeted_bomb"
+	$TouchScreen/touch_screen_use_prop.texture_normal = load("res://resources/导弹图标.png")
 
 func _on_laser_check_box_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -278,6 +282,7 @@ func _on_language_option_item_selected(index: int) -> void:
 	$PauseMenu/CharacterStatus/ShootInterval.text = tr("SHOOTINTERVAL") + ":" + str(int(player.shoot_time_reduction * 100) * 0.01)
 	$PauseMenu/CharacterStatus/Repel.text = tr("REPELUP") + ":" + str(player.repel_up)
 	$PauseMenu/Quit.text = tr("QUIT")
+	$TouchScreen/touch_screen_switch_prop/CenterContainer/Label.text = tr("SWITCHPROP")
 	
 	$PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp.set_meta("Name", tr("DAMAGEUP"))
 	$PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp.set_meta("Introduction", tr("DAMAGEUPINTRODUCTION"))
@@ -323,3 +328,7 @@ func _on_language_option_item_selected(index: int) -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_damage_display_check_button_toggled(toggled_on: bool) -> void:
+	Global.damage_display = toggled_on

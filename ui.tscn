@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://cbw6iamvpnc8d" path="res://resources/炮台图标.png" id="20_r2460"]
 [ext_resource type="Texture2D" uid="uid://ckbkq1e2c7hxt" path="res://resources/导弹图标.png" id="21_gxnlh"]
 [ext_resource type="Texture2D" uid="uid://ds3laetvqxg1" path="res://resources/夯大力饮料.png" id="21_ndy3v"]
+[ext_resource type="Texture2D" uid="uid://bibdujpl3v8g0" path="res://resources/移动按钮.png" id="22_ndy3v"]
+[ext_resource type="Texture2D" uid="uid://bpuh18jd6ie13" path="res://resources/移动按钮_按下.png" id="23_x2s2p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sosvr"]
 corner_radius_top_left = 10
@@ -61,6 +63,36 @@ thickness = 2
 color = Color(0.12591085, 0.12591085, 0.12591082, 1)
 grow_begin = 300.0
 grow_end = 218.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cka8k"]
+size = Vector2(600, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8jk5"]
+size = Vector2(600, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53buu"]
+size = Vector2(600, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w61g"]
+size = Vector2(600, 600)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x2s2p"]
+load_path = "res://.godot/imported/商店按钮.png-4ceda4ed013070eb23b390a8be073d55.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2460"]
+size = Vector2(600, 600)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gxnlh"]
+load_path = "res://.godot/imported/已售罄.png-1acd57768dbbc70899d8f3b527cca35a.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccnxy"]
+size = Vector2(100, 100)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w05v2"]
+load_path = "res://.godot/imported/绷带.png-56de77761ddeb92c91515a701458d002.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v463t"]
+size = Vector2(100, 100)
 
 [node name="UI" type="CanvasLayer" unique_id=1348119941]
 script = ExtResource("1_m6e0p")
@@ -306,6 +338,21 @@ metadata/Key = "LOCKED"
 layout_mode = 0
 offset_left = 97.0
 offset_right = 121.0
+offset_bottom = 24.0
+
+[node name="DamageDisplay" type="Label" parent="PauseMenu" unique_id=2146558765]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 354.0
+offset_right = 109.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "开启伤害跳字"
+
+[node name="DamageDisplayCheckButton" type="CheckBox" parent="PauseMenu/DamageDisplay" unique_id=1267752644]
+layout_mode = 0
+offset_left = 97.0
+offset_right = 141.0
 offset_bottom = 24.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PauseMenu" unique_id=1098640265]
@@ -762,12 +809,96 @@ offset_right = 368.5
 offset_bottom = 427.5
 text = "重新开始"
 
+[node name="TouchScreen" type="Node2D" parent="." unique_id=2087736050]
+
+[node name="touch_screen_move_up" type="TouchScreenButton" parent="TouchScreen" unique_id=1231679609]
+visible = false
+position = Vector2(132, 376)
+scale = Vector2(0.13333338, 0.13069311)
+texture_normal = ExtResource("22_ndy3v")
+texture_pressed = ExtResource("23_x2s2p")
+shape = SubResource("RectangleShape2D_cka8k")
+passby_press = true
+action = "move_up"
+visibility_mode = 1
+
+[node name="touch_screen_move_right" type="TouchScreenButton" parent="TouchScreen" unique_id=1061980714]
+visible = false
+position = Vector2(286.99997, 453)
+rotation = 1.5707964
+scale = Vector2(0.133, 0.126)
+texture_normal = ExtResource("22_ndy3v")
+texture_pressed = ExtResource("23_x2s2p")
+shape = SubResource("RectangleShape2D_v8jk5")
+passby_press = true
+action = "move_right"
+visibility_mode = 1
+
+[node name="touch_screen_move_down" type="TouchScreenButton" parent="TouchScreen" unique_id=2070174009]
+visible = false
+position = Vector2(212, 611)
+rotation = -3.1415925
+scale = Vector2(0.133, 0.133)
+texture_normal = ExtResource("22_ndy3v")
+texture_pressed = ExtResource("23_x2s2p")
+shape = SubResource("RectangleShape2D_53buu")
+passby_press = true
+action = "move_down"
+visibility_mode = 1
+
+[node name="touch_screen_move_left" type="TouchScreenButton" parent="TouchScreen" unique_id=1302716656]
+visible = false
+position = Vector2(53, 533)
+rotation = -1.5707964
+scale = Vector2(0.133, 0.133)
+texture_normal = ExtResource("22_ndy3v")
+texture_pressed = ExtResource("23_x2s2p")
+shape = SubResource("RectangleShape2D_7w61g")
+passby_press = true
+action = "move_left"
+visibility_mode = 1
+
+[node name="touch_screen_pause" type="TouchScreenButton" parent="TouchScreen" unique_id=1657162969]
+visible = false
+position = Vector2(142, 463.00003)
+scale = Vector2(0.1, 0.097)
+texture_normal = SubResource("CompressedTexture2D_x2s2p")
+shape = SubResource("RectangleShape2D_r2460")
+action = "pause"
+visibility_mode = 1
+
+[node name="touch_screen_switch_prop" type="TouchScreenButton" parent="TouchScreen" unique_id=2049082268]
+visible = false
+position = Vector2(963.99994, 441)
+scale = Vector2(0.871, 0.871)
+texture_normal = SubResource("CompressedTexture2D_gxnlh")
+shape = SubResource("RectangleShape2D_ccnxy")
+action = "switch_prop"
+
+[node name="CenterContainer" type="CenterContainer" parent="TouchScreen/touch_screen_switch_prop" unique_id=597072160]
+offset_right = 91.84851
+offset_bottom = 90.70032
+
+[node name="Label" type="Label" parent="TouchScreen/touch_screen_switch_prop/CenterContainer" unique_id=904067949]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "切换道具"
+
+[node name="touch_screen_use_prop" type="TouchScreenButton" parent="TouchScreen" unique_id=864136803]
+visible = false
+position = Vector2(861.99994, 441)
+scale = Vector2(0.8709669, 0.8709669)
+texture_normal = SubResource("CompressedTexture2D_w05v2")
+shape = SubResource("RectangleShape2D_v463t")
+action = "use_props"
+
 [connection signal="pressed" from="PropSwitchPanel/SwitchBandage" to="." method="_on_switch_bandage_pressed"]
 [connection signal="pressed" from="PropSwitchPanel/SwitchEnergyDrinks" to="." method="_on_switch_energy_drinks_pressed"]
 [connection signal="pressed" from="PropSwitchPanel/SwitchTurrut" to="." method="_on_switch_turrut_pressed"]
 [connection signal="pressed" from="PropSwitchPanel/SwitchGeneTargetedBomb" to="." method="_on_switch_gene_targeted_bomb_pressed"]
 [connection signal="value_changed" from="PauseMenu/Sensitivity/SensitivitySlider" to="." method="_on_sensitivity_slider_value_changed"]
 [connection signal="toggled" from="PauseMenu/LaserSight/LaserCheckBox" to="." method="_on_laser_check_box_toggled"]
+[connection signal="toggled" from="PauseMenu/DamageDisplay/DamageDisplayCheckButton" to="." method="_on_damage_display_check_button_toggled"]
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/DamageUp" to="." method="_on_damage_up_pressed"]
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/ShootSpeedUp" to="." method="_on_shoot_speed_up_pressed"]
 [connection signal="pressed" from="PauseMenu/ScrollContainer/GoodsList/Plus/RepelUp" to="." method="_on_repel_up_pressed"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
-var life = 100
-var speed = 200 #移动速度
+@export var life = 100 
+@export var speed = 200 #移动速度
 var speed_multiplier = 1 #移动速度倍率
 var shoot_time_reduction = 1 #增益攻击间隔
 var repel_up = 0

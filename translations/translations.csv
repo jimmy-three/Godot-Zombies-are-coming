@@ -85,3 +85,4 @@ NOCOMMERCIAL,请勿用于商业用途或擅自打包上传,Not for commercial us
 GAMEINSTRUCTION,玩法说明,Instructions,やり方
 INSTRUCTIONCONTEXT,使用WASD移动你的角色，点击空格以射击，使用左右方向键以转向(或者在商店中购买面向鼠标道具)\n\n按下TAB进入商店与设置界面(包括语言选项)，再次按下TAB以返回\n\n长按Q键以选择装备的道具，按下E键以使用您装备的道具\n\n按下数字键(1~5)以切换武器,Move your character with WASD. Press SPACE to shoot. Use the LEFT/RIGHT arrow keys to turn (or buy mouse-aimed items in the shop)\n\nPress TAB to open the shop and settings (including language options). Press TAB again to return\n\nHold Q to select an equipped item. Press E to use your equipped item\n\nPress number keys (1~5) to switch weapons,WASDでキャラクターを移動します。SPACEで射撃します。左右の矢印キーで方向転換します（またはショップでマウス方向アイテムを購入可能）\n\nTABでショップと設定（言語オプション含む）を開きます。もう一度TABで戻ります\n\nQキー長押しで装備アイテムを選択します。Eキーで装備中のアイテムを使用します\n\n数字キー（1〜5）で武器を切り替えます
 QUIT,退出游戏,Quit,終了
+SWITCHPROP,切换道具,Switch\nprop,道具\nをかえる

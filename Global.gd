@@ -5,7 +5,7 @@ var TipScene = preload("res://tip.tscn")
 #int
 var difficulty = 1
 var zombie_spawn_interval = 3.5 - 0.035 * difficulty if difficulty < 100 else 0.1
-var coin = 50
+var coin = 100
 var max_life = 100
 var bullet_9mm = 50
 var bullet_762mm = 0
@@ -27,6 +27,7 @@ var auto_bullet_buying = false
 var using_props = false
 var out_of_range = false
 var dead = false
+var damage_display = false
 #列表
 var Bullet_list = [] #现显示的子弹
 var Zombie_list = [] #现显示的僵尸

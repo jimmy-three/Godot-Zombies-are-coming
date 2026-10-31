@@ -94,6 +94,7 @@ animations = [{
 z_index = 1
 collision_mask = 28
 script = ExtResource("1_onrkg")
+life = nan
 
 [node name="Person" type="AnimatedSprite2D" parent="." unique_id=1901977597]
 scale = Vector2(0.5, 0.5)
@@ -104,6 +105,7 @@ position = Vector2(25.999998, 0)
 scale = Vector2(0.57352936, 0.5735294)
 sprite_frames = SubResource("SpriteFrames_ifow5")
 animation = &"gatlin2"
+frame_progress = 0.110840455
 
 [node name="Marker2D" type="Marker2D" parent="gun" unique_id=2020193506]
 position = Vector2(-6.799999, 0)

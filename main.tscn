@@ -52,6 +52,7 @@ texture = ExtResource("3_h2yge")
 [node name="UI" parent="." unique_id=1348119941 instance=ExtResource("3_1bvp3")]
 
 [node name="player" parent="." unique_id=4952656 instance=ExtResource("1_ig7tw")]
+life = 100
 
 [node name="SpawnPath" type="Path2D" parent="player" unique_id=13392335]
 curve = SubResource("Curve2D_0xm2m")
